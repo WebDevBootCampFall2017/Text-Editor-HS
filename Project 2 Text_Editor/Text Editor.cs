@@ -13,7 +13,9 @@ namespace Project_2_Text_Editor
 {
     public partial class frmTextEditor : Form
     {
+        string AppName = "Text Editor";
         string _FileName = null;
+        bool isSaved = false;
 
         public frmTextEditor()
         {
@@ -40,6 +42,7 @@ namespace Project_2_Text_Editor
                 }
                 sr.Close();
                 _FileName = ofd.FileName;
+                this.Text = Path.GetFileName(_FileName) + " - " + AppName;
             }
         }
 
@@ -48,31 +51,34 @@ namespace Project_2_Text_Editor
             SaveFileDialog sfd = new SaveFileDialog();
             if (_FileName == null)
             {
-                sfd.Filter = "Text Files .txt|*.txt";
+                sfd.Filter = "Text Files|*.txt";
                 sfd.Title = "Save";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
+                    isSaved = true;
                     rtxRichTextBox.SaveFile(sfd.FileName, RichTextBoxStreamType.PlainText);
                     _FileName = sfd.FileName;
-                    this.Text = sfd.FileName;
+                    this.Text = Path.GetFileName(sfd.FileName) + " - " + AppName;
                 }
             }
             else
             {
+                isSaved = true;
                 rtxRichTextBox.SaveFile(_FileName, RichTextBoxStreamType.PlainText);
-                MessageBox.Show("file saved");
+                MessageBox.Show("File Saved!!", "Title");
             }
         }
 
         private void mnsSaveAs_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Text Files .txt|*.txt";
+            sfd.Filter = "Text Files|*.txt";
             sfd.Title = "Save As";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
+                isSaved = true;
                 rtxRichTextBox.SaveFile(sfd.FileName, RichTextBoxStreamType.PlainText);
-                this.Text = sfd.FileName;
+                this.Text = Path.GetFileName(sfd.FileName) + " - " + AppName;
             }
         }
 
@@ -90,23 +96,89 @@ namespace Project_2_Text_Editor
             }
         }
 
+        //Find
         private void mnsFind_Click(object sender, EventArgs e)
         {
+            frmFind formFind = new frmFind();
+            formFind.Height = 85;
+            formFind.Text = "Find";
 
-            MessageBox.Show("Unavailable in this version.","MsgBox");
+            formFind.btnReplace.Visible = false;
+            formFind.lblReplace.Visible = false;
+            formFind.txtReplace.Visible = false;
+            formFind.ShowDialog();
+        }
+
+        //Replace
+        private void findAndReplaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFind formFind = new frmFind();
+            formFind.Height = 112;
+            formFind.Text = "Find and Replace";
+            formFind.ShowDialog();
+
+            formFind.btnReplace.Visible = true;
+            formFind.lblReplace.Visible = true;
+            formFind.txtReplace.Visible = true;
 
         }
 
+        //Default Theme
         private void defultToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rtxRichTextBox.BackColor = Color.White;
-            rtxRichTextBox.ForeColor = Color.Black;
+            rtxRichTextBox.BackColor = SystemColors.Window;
+            rtxRichTextBox.ForeColor = SystemColors.WindowText;
+            menuStrip.BackColor = SystemColors.Control;
+            menuStrip.ForeColor = SystemColors.ControlText;
+
         }
 
+        //Matrix Theme
         private void matrixToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rtxRichTextBox.BackColor = Color.Black;
             rtxRichTextBox.ForeColor = Color.Green;
+            menuStrip.BackColor = Color.Black;
+            menuStrip.ForeColor = Color.Green;
+        }
+
+        //Popup * sign in the title when text changed.
+        public void rtxRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (_FileName != null)
+            {
+                isSaved = false;
+                this.Text = Path.GetFileName(_FileName) + "- *" + AppName;
+            }
+        }
+
+        //checking to save before exit
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (rtxRichTextBox.Text.Length <= 0)
+            {
+                this.Close();
+            }
+             else if  (isSaved == false)
+            {
+                DialogResult dr = MessageBox.Show("Do you want to save changes?", AppName, MessageBoxButtons.YesNoCancel);
+                if (dr == DialogResult.Yes)
+                {
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.Filter = "Text Files|*.txt";
+                    sfd.Title = "Save As";
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        isSaved = true;
+                        rtxRichTextBox.SaveFile(sfd.FileName, RichTextBoxStreamType.PlainText);
+                        this.Text = Path.GetFileName(sfd.FileName) + " - " + AppName;
+                    }
+                }
+                else if (dr == DialogResult.No)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

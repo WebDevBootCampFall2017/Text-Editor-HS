@@ -7,3 +7,13 @@ d:\users\hou sheng chiang\documents\visual studio 2017\Projects\Project 2 Text_E
 d:\users\hou sheng chiang\documents\visual studio 2017\Projects\Project 2 Text_Editor\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.exe
 d:\users\hou sheng chiang\documents\visual studio 2017\Projects\Project 2 Text_Editor\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.pdb
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Project 2 Text_Editor\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmTextEditor.resources
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.exe.config
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.exe
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.pdb
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.csprojResolveAssemblyReference.cache
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmTextEditor.resources
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.Properties.Resources.resources
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.csproj.GenerateResource.Cache
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.exe
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.pdb
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmFind.resources
