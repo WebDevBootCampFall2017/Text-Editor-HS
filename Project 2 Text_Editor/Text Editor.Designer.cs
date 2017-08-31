@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTextEditor));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mnsFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsOpenFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -232,7 +231,6 @@
             this.ClientSize = new System.Drawing.Size(660, 350);
             this.Controls.Add(this.rtxRichTextBox);
             this.Controls.Add(this.menuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmTextEditor";
             this.Text = "Text Editor";
