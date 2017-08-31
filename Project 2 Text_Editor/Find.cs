@@ -16,9 +16,12 @@ namespace Project_2_Text_Editor
     public partial class frmFind : Form
     {
         int TextIndex;
+        string TextToFind;
         public frmFind()
+
         {
             InitializeComponent();
+            
         }
         
 
@@ -26,9 +29,8 @@ namespace Project_2_Text_Editor
         {
             //retrieve text from the richtextbox in the Main form.
             Form f = Application.OpenForms["frmTextEditor"];
-            ((frmTextEditor)f).rtxRichTextBox.Visible = false;
             string textfromTE = ((frmTextEditor)f).rtxRichTextBox.Text;
-            string TextToFind = txtFind.Text;
+            TextToFind = txtFind.Text;
           
 
             TextIndex = textfromTE.IndexOf(TextToFind);
@@ -43,12 +45,18 @@ namespace Project_2_Text_Editor
             }
             else
             {
+                ((frmTextEditor)f).Focus();
                 ((frmTextEditor)f).rtxRichTextBox.SelectionStart = TextIndex;
                 ((frmTextEditor)f).rtxRichTextBox.SelectionLength = TextToFind.Length;
-                this.Close();
             }
         }
 
+        private void btnReplace_Click(object sender, EventArgs e)
+        {
+            string ReplaceToText = txtReplace.Text;
+            Form f = Application.OpenForms["frmTextEditor"];
+            ((frmTextEditor)f).rtxRichTextBox.Text = ((frmTextEditor)f).rtxRichTextBox.Text.Replace(((frmTextEditor)f).rtxRichTextBox.Text.Substring(TextIndex,TextToFind.Length), ReplaceToText);
+        }
 
         private void btnCancelFind_Click(object sender, EventArgs e)
         {
@@ -61,11 +69,6 @@ namespace Project_2_Text_Editor
             {
                 btnFind_Click(this, new EventArgs());
             }
-        }
-
-        private void btnReplace_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

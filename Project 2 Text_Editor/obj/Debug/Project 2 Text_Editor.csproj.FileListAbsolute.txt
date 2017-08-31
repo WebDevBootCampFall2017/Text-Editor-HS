@@ -11,9 +11,13 @@ D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\P
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.exe
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.pdb
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.csprojResolveAssemblyReference.cache
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmFind.resources
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmTextEditor.resources
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.Properties.Resources.resources
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.csproj.GenerateResource.Cache
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.exe
 D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.pdb
-D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project_2_Text_Editor.frmFind.resources
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.exe.manifest
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\bin\Debug\Project 2 Text_Editor.application
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.exe.manifest
+D:\Users\Hou Sheng Chiang\Documents\Visual Studio 2017\Projects\Text-Editor-HS\Project 2 Text_Editor\obj\Debug\Project 2 Text_Editor.application

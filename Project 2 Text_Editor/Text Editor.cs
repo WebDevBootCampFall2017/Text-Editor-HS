@@ -16,11 +16,14 @@ namespace Project_2_Text_Editor
         string AppName = "Text Editor";
         string _FileName = null;
         bool isSaved = false;
-
+        
         public frmTextEditor()
         {
             InitializeComponent();
         }
+
+
+
 
 
         //Open a File
@@ -46,6 +49,7 @@ namespace Project_2_Text_Editor
             }
         }
 
+        //Save
         private void mnsSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -69,6 +73,7 @@ namespace Project_2_Text_Editor
             }
         }
 
+        //Save As
         private void mnsSaveAs_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -81,7 +86,6 @@ namespace Project_2_Text_Editor
                 this.Text = Path.GetFileName(sfd.FileName) + " - " + AppName;
             }
         }
-
 
         //WordWrap
         private void mnsWordWrap_Click(object sender, EventArgs e)
@@ -106,7 +110,7 @@ namespace Project_2_Text_Editor
             formFind.btnReplace.Visible = false;
             formFind.lblReplace.Visible = false;
             formFind.txtReplace.Visible = false;
-            formFind.ShowDialog();
+            formFind.Show();
         }
 
         //Replace
@@ -115,12 +119,17 @@ namespace Project_2_Text_Editor
             frmFind formFind = new frmFind();
             formFind.Height = 112;
             formFind.Text = "Find and Replace";
-            formFind.ShowDialog();
-
+            
             formFind.btnReplace.Visible = true;
             formFind.lblReplace.Visible = true;
             formFind.txtReplace.Visible = true;
+            formFind.Show();
+        }
 
+        //Customize Color Theme
+        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Unavailable in this Version Yet.", "Oops!");
         }
 
         //Default Theme
@@ -140,6 +149,15 @@ namespace Project_2_Text_Editor
             rtxRichTextBox.ForeColor = Color.Green;
             menuStrip.BackColor = Color.Black;
             menuStrip.ForeColor = Color.Green;
+        }
+
+        //Pinky Theme
+        private void pinkyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtxRichTextBox.BackColor = Color.LightPink;
+            rtxRichTextBox.ForeColor = Color.HotPink;
+            menuStrip.BackColor = Color.LightPink;
+            menuStrip.ForeColor = Color.HotPink;
         }
 
         //Popup * sign in the title when text changed.
@@ -178,6 +196,36 @@ namespace Project_2_Text_Editor
                 {
                     this.Close();
                 }
+            }
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog ftd = new FontDialog();
+            if (ftd.ShowDialog() == DialogResult.OK)
+            {
+                if (rtxRichTextBox.Text.Length == 0 || rtxRichTextBox.SelectionLength == 0)
+                {
+                    rtxRichTextBox.Font = ftd.Font;
+                }
+                else
+                {
+                    rtxRichTextBox.SelectionFont = ftd.Font;
+                }
+            }
+        }
+
+        private void mnsAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Text Editor \n Author: HouSheng Chiang.\n Version: 1.0" ,"About");
+        }
+
+        private void rtxRichTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.F)
+            {
+                frmFind frmF = new frmFind();
+                frmF.Show();
             }
         }
     }
