@@ -46,7 +46,6 @@
             this.defultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pinkyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.rtxRichTextBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip.SuspendLayout();
@@ -171,8 +170,7 @@
             this.themeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defultToolStripMenuItem,
             this.matrixToolStripMenuItem,
-            this.pinkyToolStripMenuItem,
-            this.customizeToolStripMenuItem});
+            this.pinkyToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             this.themeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.themeToolStripMenuItem.Text = "Theme";
@@ -197,13 +195,6 @@
             this.pinkyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pinkyToolStripMenuItem.Text = "Pinky";
             this.pinkyToolStripMenuItem.Click += new System.EventHandler(this.pinkyToolStripMenuItem_Click);
-            // 
-            // customizeToolStripMenuItem
-            // 
-            this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            this.customizeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.customizeToolStripMenuItem.Text = "Customize";
-            this.customizeToolStripMenuItem.Click += new System.EventHandler(this.customizeToolStripMenuItem_Click);
             // 
             // mnsAbout
             // 
@@ -256,7 +247,6 @@
         private System.Windows.Forms.ToolStripMenuItem defultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matrixToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pinkyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findAndReplaceToolStripMenuItem;
         public System.Windows.Forms.RichTextBox rtxRichTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;

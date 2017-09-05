@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project 2 Text_Editor.exe" size="54792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project 2 Text_Editor.exe" size="54280">
       <assemblyIdentity name="Project 2 Text_Editor" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hp4NInDpp70SfWudg4wmT4Phnn6XAkhe8q5wViTiSDQ=</dsig:DigestValue>
+        <dsig:DigestValue>Sexkpq3N9a+ecw+uFsjfW+UMgublWXVZ5s42QzLqmT8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
