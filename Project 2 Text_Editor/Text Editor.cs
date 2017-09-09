@@ -21,10 +21,7 @@ namespace Project_2_Text_Editor
         {
             InitializeComponent();
         }
-
-
-
-
+        
 
         //Open a File
         private void mnsOpenFile_Click(object sender, EventArgs e)
@@ -126,12 +123,6 @@ namespace Project_2_Text_Editor
             formFind.Show();
         }
 
-        //Customize Color Theme
-        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Unavailable in this Version Yet.", "Oops!");
-        }
-
         //Default Theme
         private void defultToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -202,15 +193,18 @@ namespace Project_2_Text_Editor
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FontDialog ftd = new FontDialog();
+            ftd.ShowColor = true;
             if (ftd.ShowDialog() == DialogResult.OK)
             {
                 if (rtxRichTextBox.Text.Length == 0 || rtxRichTextBox.SelectionLength == 0)
                 {
                     rtxRichTextBox.Font = ftd.Font;
+                    rtxRichTextBox.ForeColor = ftd.Color;
                 }
                 else
                 {
                     rtxRichTextBox.SelectionFont = ftd.Font;
+                    rtxRichTextBox.ForeColor = ftd.Color;
                 }
             }
         }
