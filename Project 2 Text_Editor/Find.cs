@@ -53,8 +53,28 @@ namespace Project_2_Text_Editor
 
         private void btnReplace_Click(object sender, EventArgs e)
         {
-            string ReplaceToText = txtReplace.Text;
             Form f = Application.OpenForms["frmTextEditor"];
+            string textfromTE = ((frmTextEditor)f).rtxRichTextBox.Text;
+            TextToFind = txtFind.Text;
+
+
+            TextIndex = textfromTE.IndexOf(TextToFind);
+
+            if (TextIndex < 0)
+            {
+                MessageBox.Show("Can't Find the text: " + TextToFind);
+            }
+            else if (TextToFind.Length == 0)
+            {
+                MessageBox.Show("Please Enter a text");
+            }
+            else
+            {
+                ((frmTextEditor)f).rtxRichTextBox.SelectionStart = TextIndex;
+                ((frmTextEditor)f).rtxRichTextBox.SelectionLength = TextToFind.Length;
+            }
+
+            string ReplaceToText = txtReplace.Text;
             ((frmTextEditor)f).rtxRichTextBox.Text = ((frmTextEditor)f).rtxRichTextBox.Text.Replace(((frmTextEditor)f).rtxRichTextBox.Text.Substring(TextIndex,TextToFind.Length), ReplaceToText);
         }
 

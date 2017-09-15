@@ -204,7 +204,7 @@ namespace Project_2_Text_Editor
                 else
                 {
                     rtxRichTextBox.SelectionFont = ftd.Font;
-                    rtxRichTextBox.ForeColor = ftd.Color;
+                    rtxRichTextBox.SelectionColor = ftd.Color;
                 }
             }
         }
